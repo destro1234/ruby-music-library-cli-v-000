@@ -28,7 +28,7 @@ class MusicLibraryController
       when "list artist"
         input = gets.strip
         Artist.all.each do |artist|
-          if input == artist
+          if input = artist
             puts artist.songs
 
           end
