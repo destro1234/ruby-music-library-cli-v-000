@@ -30,9 +30,15 @@ class MusicLibraryController
         Artist.all.each do |artist|
           if input = artist
             puts artist.songs
-
           end
+        end
 
+      when "list genre"
+        input = gets.strip
+        Genre.all.each do |genre|
+          if input = genre
+            puts genre.songs
+          end
         end
       end
     end
