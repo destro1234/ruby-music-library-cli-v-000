@@ -6,6 +6,10 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
 
+  def list_songs
+    Song.all.each_with_index {|song, index| puts "#{index +1}. #{song}"}
+  end
+
   def call
     input = ""
     until input == 'exit'
@@ -13,13 +17,17 @@ class MusicLibraryController
 
       case input
       when "list songs"
-        Song.all.each_with_index {|song, index| puts "#{index +1}. #{song}"}
+        list_songs
 
       when "list artists"
         Artist.all.each {|artist| puts "#{artist.name}"}
 
       when "list genres"
         Genre.all.each {|genre| puts "#{genre.name}"}
+
+      when "play song"
+        input = gets.strip.to_i
+        Song.all.each_with_index{|song, index| puts "#{index +1} #{song}"}
       end
     end
   end
