@@ -18,5 +18,6 @@ class MusicLibraryController
       when "list artists"
         Artist.all.each {|artist| puts "#{artist.name}"}
       end
+      end
   end
 end
