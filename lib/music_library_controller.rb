@@ -9,7 +9,7 @@ class MusicLibraryController
   def call
     input = ""
     until input = 'exit'
-      input = gets.strip.to_i
+      input = gets.strip
     end
   end
 end
