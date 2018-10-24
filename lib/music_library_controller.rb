@@ -24,6 +24,16 @@ class MusicLibraryController
       when "play song"
         input = gets.strip.to_i
         puts "Playing #{Song.all[input-1]}"
+
+      when "list artist"
+        input = gets.strip
+        Artist.all.each do |artist|
+          if input == artist
+            puts artist.songs
+
+          end
+
+        end
       end
     end
   end
