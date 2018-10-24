@@ -22,8 +22,7 @@ class MusicLibraryController
         Genre.all.each {|genre| puts "#{genre.name}"}
 
       when "play song"
-        input = gets.strip.to_i
-        Song.all.each_with_index{|song, index| puts "#{index +1} #{song}"}
+        input = gets.strip.to
       end
     end
   end
