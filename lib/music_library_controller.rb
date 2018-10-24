@@ -15,6 +15,9 @@ class MusicLibraryController
       when "list songs"
         Song.all.each_with_index {|song, index| puts "#{index +1}. #{song}"}
       end
-    end
+
+      when "list artists"
+        Artist.all.each {|artist| puts "#{artist.name}"}
+      end
   end
 end
