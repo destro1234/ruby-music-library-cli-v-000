@@ -13,7 +13,7 @@ class MusicLibraryController
 
       case input
       when "list songs"
-        Song.all.each_with_index {|song, index| puts "#{index}. #{song}"}
+        Song.all.each_with_index(1) {|song, index| puts "#{index}. #{song}"}
       end
     end
   end
