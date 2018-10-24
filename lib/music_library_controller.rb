@@ -31,12 +31,11 @@ class MusicLibraryController
         song_list.each do |song|
           if input == song.index
             puts "Playing {song}"
-            
+
           end
-          
+
         end
         end
       end
     end
   end
-end
