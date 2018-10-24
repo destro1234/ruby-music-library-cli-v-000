@@ -25,6 +25,6 @@ class MusicLibraryController
         input = gets.strip.to_i
         puts "Playing #{Song.all[input-1]}"
       end
-    end
+    ends
   end
 end
