@@ -28,6 +28,8 @@ class MusicLibraryController
       when "play song"
         input = gets.strip.to_i
         song_list = list_songs
+        song_list.each {|song, index| if input == index puts "Playing {song}"}
+        end
       end
     end
   end
